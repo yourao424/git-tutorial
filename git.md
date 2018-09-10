@@ -21,7 +21,7 @@ git clone %gitのURL%
 1. 作業場所を最新の状態にする
 
    ```
-   git pull
+   git pull origin master
    ```
 
 2. ブランチを作成する
@@ -114,6 +114,18 @@ git checkout %リビジョン% %ファイル名%
 
 
 
+### commit
+
+```
+コミット
+git commit
+
+直前のコミットを修正する
+git commit --amend 
+```
+
+
+
 ### log
 
 ```
@@ -121,4 +133,72 @@ git log %ファイル名%
 ```
 
 
+
+### merge
+
+```groovy
+git merge %ブランチ名%
+
+例：AにBの変更を適用する
+git checkout A
+
+git merge B
+```
+
+
+
+### rebase
+
+```
+git rebase %ブランチ名%
+
+%ブランチ名%に現在のブランチで行ったすべてのコミットを適用する
+```
+
+
+
+### diff
+
+```
+作業場所で変更した内容を確認する
+git diff
+```
+
+
+
+### revert
+
+```
+git revert
+```
+
+
+
+### reset 
+
+```
+git reset
+```
+
+
+
+### cherry-pick
+
+```
+気が向いたら追記
+```
+
+
+
+### .gitignore
+
+```
+Gitの管理に含めないファイルを指定するためのファイル
+```
+
+
+
+## 補足説明
+
+pull =  fetch + merge origin/master
 
